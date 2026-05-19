@@ -38,6 +38,11 @@
       url = "github:goauthentik/authentik/version/2026.5.6";
       flake = false;
     };
+
+    client-ts-generator-src = {
+      url = "github:goauthentik/client-ts";
+      flake = false;
+    };
   };
 
   outputs =
@@ -45,6 +50,7 @@
       self,
       flake-parts,
       authentik-src,
+      client-ts-generator-src,
       uv2nix,
       pyproject-build-systems,
       pyproject-nix,
@@ -130,6 +136,7 @@
 
                 inherit
                   authentik-src
+                  client-ts-generator-src
                   authentik-version
                   uv2nix
                   pyproject-build-systems
