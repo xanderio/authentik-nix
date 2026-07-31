@@ -17,6 +17,22 @@
         "type": "github"
       }
     },
+    "client-ts-generator-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1784638510,
+        "narHash": "sha256-NfwEWQ/SRjgeUz+F/7uoWAMwk7OqdF2+686krhvJn2M=",
+        "owner": "goauthentik",
+        "repo": "client-ts",
+        "rev": "5850af5867bef6fd4291731797d21b704c7f189d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "goauthentik",
+        "repo": "client-ts",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -151,6 +167,7 @@
     "root": {
       "inputs": {
         "authentik-src": "authentik-src",
+        "client-ts-generator-src": "client-ts-generator-src",
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils",
