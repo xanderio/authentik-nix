@@ -8,6 +8,7 @@
 runCommandLocal "authentik-migrate.py"
   {
     nativeBuildInputs = [ makeWrapper ];
+    buildInputs = [ authentikComponents.pythonEnv ];
   }
   ''
     mkdir -vp $out/bin
@@ -19,6 +20,5 @@ runCommandLocal "authentik-migrate.py"
       'Path(__file__).parent.absolute().glob("system_migrations/*.py")' \
       'Path("${authentikComponents.staticWorkdirDeps}/lifecycle").glob("system_migrations/*.py")'
     wrapProgram $out/bin/migrate.py \
-      --prefix PATH : ${authentikComponents.pythonEnv}/bin \
       --prefix PYTHONPATH : ${authentikComponents.staticWorkdirDeps}
   ''
